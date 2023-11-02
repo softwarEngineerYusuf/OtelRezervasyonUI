@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-pers {
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 550px;
+  background: rgb(219 195 157);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-pers form {
+  position: absolute;
+  inset: 4px;
+  background: rgb(207 170 111);
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row; /* Yatay düzenlemek için */
+  flex-wrap: wrap; /* Eğer genişlik yetersizse alt satıra geçmesi için */
+  justify-content: space-between; /* Inputlar arasında boşluk bırakmak için */
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-pers form .inputBox {
+  position: relative;
+  width: calc(50% - 10px); /* İki input yan yana olacak şekilde */
+  margin-top: 20px;
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-pers::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff8200,
+    #ff8200,
+    #ff8200
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box-pers::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff8200,
+    #ff8200,
+    #ff8200
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderLine::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #2986cc,
+    #2986cc,
+    #2986cc
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+.borderLine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #2986cc,
+    #2986cc,
+    #2986cc
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box-pers form h2 {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.box-pers form .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 50px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.box-pers form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.box-pers form .inputBox input:valid ~ span,
+.box-pers form .inputBox input:focus ~ span {
+  color: #fff;
+  font-size: 0.75em;
+  transition: translateY(-34px);
+}
+.box-pers form .inputBox i {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.box-pers form .inputBox input:valid ~ i,
+.box-pers form .inputBox input:focus ~ i {
+  height: 55px;
+}
+.box-pers form .links {
+  display: flex;
+  justify-content: space-between;
+}
+.box-pers form .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+.box-pers form .links a:hover,
+.box-pers form .links a:nth-child(2) {
+  color: #fff;
+}
+
+.button-70 {
+  background-color: #c17b2c;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #464141;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 50px; /* Biraz aşağıya kayması için */
+  margin-right: 15px; /* Biraz sola kayması için */
+}
+
+.button-70:hover {
+  background-color: #fff;
+}
+
+.button-70:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-70 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}

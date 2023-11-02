@@ -1,0 +1,85 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Her satırda 3 kart */
+  gap: 20px; /* Kartlar arasındaki boşluk */
+  margin: 20px auto; /* Konteyner merkezleniyor */
+  max-width: 1200px; /* Konteynerin maksimum genişliği */
+}
+
+.custom-card {
+  width: 100%;
+  height: 400px; /* Kart yüksekliği */
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border: none;
+}
+
+.card-overlay {
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.card-title {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.wrapperTitle-3 {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+
+  display: grid;
+  grid-template-areas: "overlap";
+  place-content: center;
+
+  height: 200px;
+}
+.wrapperTitle-3 > div {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1em, 5vw, 4rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+}
+div.bg {
+  --gold: black;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+  background-image: repeating-linear-gradient(
+    105deg,
+    var(--gold) 0%,
+    var(--dark-shadow) 5%,
+    var(--gold) 12%
+  );
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px rgb(181, 138, 64));
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+div.fg {
+  --gold: black;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+
+  background-image: repeating-linear-gradient(
+    5deg,
+    var(--gold) 0%,
+    var(--light-shadow) 23%,
+    var(--gold) 31%
+  );
+  color: rgb(181, 138, 64);
+  transform: scale(1);
+}

@@ -1,0 +1,154 @@
+:root {
+  --PrimaryColor: #0073a8;
+  --SecondaryColor: #10b5cb;
+  --gradientColor: linear-gradient(to right, #10b5cb, #0073a8);
+  --whiteColor: #fff;
+  --blackColor: #1b2d36;
+  --textColor: #58585f;
+  --whiteColorDeam: #ededed;
+  --greyText: #bebebe;
+  --inputColor: #efefef;
+  --bodyColor: #f0f0f6;
+  --cardBG: #e1e1eb;
+  --cardHover: rbg(255, 255, 255);
+}
+.main {
+  width: 100%;
+}
+.main .secTitle .title {
+  position: relative;
+  width: max-content;
+  color: var(--textColor);
+  margin: 1rem 0;
+  z-index: 2;
+}
+.main .secTitle .title::after {
+  position: absolute;
+  content: " ";
+  background: var(--SecondaryColor);
+  height: 5px;
+  width: 120px;
+  right: 0;
+  bottom: 5px;
+  z-index: -1;
+}
+.main .secContent {
+  justify-content: center;
+  gap: 1.5rem;
+}
+.main .secContent .singleDestination {
+  height: 100%;
+  display: grid;
+  row-gap: 10px;
+  /* padding: 1rem;
+  */
+  align-items: center;
+  background: var(--cardBG);
+  box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+  overflow: hidden !important;
+  border-radius: 15px;
+}
+.main .secContent .singleDestination:hover {
+  box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+  transition: 0.3s ease;
+  background: var(--cardHover);
+}
+.main .secContent .singleDestination .imageDiv {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+.main .secContent .singleDestination .imageDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 2s ease;
+}
+.main .secContent .singleDestination .imageDiv:hover img {
+  transform: scale(1.5);
+}
+.main .secContent .singleDestination .cardInfo {
+  padding: 1rem;
+}
+.main .secContent .singleDestination .cardInfo .destTitle {
+  color: var(--blackColor);
+  font-size: 1.25rem;
+}
+.main .secContent .singleDestination .cardInfo .continent {
+  gap: 0.5rem;
+}
+.main .secContent .singleDestination .cardInfo .continent .icon {
+  color: var(--textColor);
+  font-size: 18px;
+}
+.main .secContent .singleDestination .cardInfo .continent .name {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 14px;
+}
+.main .secContent .singleDestination .cardInfo .fees {
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1.5px solid var(--greyText);
+  border-bottom: 1.5px solid var(--greyText);
+}
+.main .secContent .singleDestination .cardInfo .fees .grade {
+  color: var(--textColor);
+  max-width: 100px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .secContent .singleDestination .cardInfo .fees .grade small {
+  text-align: center;
+  background: var(--gradientColor);
+  border-radius: 1rem;
+  color: var(--whiteColor);
+  padding: 1px 10px;
+  font-size: 10px;
+}
+.main .secContent .singleDestination .cardInfo .fees .price {
+  font-size: 2rem;
+  color: var(--blackColor);
+}
+.main .secContent .singleDestination .cardInfo .desc {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--textColor);
+}
+.main .secContent .singleDestination .cardInfo .btn {
+  margin-top: 1rem;
+  color: var(--whiteColor);
+  font-weight: 600;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.main .secContent .singleDestination .cardInfo .btn .icon {
+  align-self: center;
+  font-size: 18px;
+}
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+}
+@media screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+}

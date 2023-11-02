@@ -1,0 +1,119 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-text-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.left-aligned-heading {
+  text-align: left;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-text-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon-size {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.icon-text {
+  white-space: nowrap;
+}
+
+.border-img {
+  background: transparent;
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px #999;
+  position: relative;
+}
+
+.imgDiv {
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: flex-start; /* Resmi sola yaslar */
+}
+
+.text {
+  font-size: 14px;
+  text-align: left;
+}
+.fiyat {
+  border: 2px solid #157cc2;
+}
+
+.contact {
+  margin-top: 40px;
+}
+
+.phone {
+  padding-left: 120px;
+}
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color: #157cc2;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #91c8e4;
+  color: #000;
+}
+
+.button:after {
+  content: "";
+  background: #91c8e4;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.number {
+  font-weight: 800;
+}

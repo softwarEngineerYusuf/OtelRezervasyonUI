@@ -1,0 +1,499 @@
+:root {
+  --PrimaryColor: #0073a8;
+  --SecondaryColor: #10b5cb;
+  --gradientColor: linear-gradient(to right, #10b5cb, #0073a8);
+  --whiteColor: #fff;
+  --blackColor: #1b2d36;
+  --textColor: #58585f;
+  --whiteColorDeam: #ededed;
+  --greyText: #bebebe;
+  --inputColor: #efefef;
+  --bodyColor: #f0f0f6;
+  --cardBG: #e1e1eb;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.footer .videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.footer .videoDiv video {
+  height: 100%;
+  object-fit: cover;
+}
+.footer .videoDiv::after {
+  content: "";
+  position: absolute;
+  background: rgba(10, 84, 107, 0.307);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+}
+.footer .secContent {
+  width: 100%;
+  height: max-content;
+  padding: 2rem initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  row-gap: 2rem;
+  z-index: 100;
+}
+.footer .secContent .contactDiv {
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .secContent .contactDiv .text small {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--whiteColor);
+}
+.footer .secContent .contactDiv .text h2 {
+  color: var(--whiteColor);
+  font-size: 1.8rem;
+}
+.footer .secContent .contactDiv .inputDiv {
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+.footer .secContent .contactDiv .inputDiv input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 3rem;
+  border: 1px solid var(--whiteColor);
+  outline: none;
+  background: transparent;
+  color: var(--whiteColor);
+}
+.footer .secContent .contactDiv .inputDiv input::placeholder {
+  color: var(--whiteColor);
+  opacity: 0.5;
+}
+.footer .secContent .contactDiv .inputDiv .btn {
+  width: 100%;
+  justify-content: center;
+  color: var(--whiteColor);
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.footer .secContent .footerCard {
+  position: relative;
+  padding: 1rem 1rem 4rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background: var(--bodyColor);
+  width: 100%;
+  justify-content: center;
+  flex-direction: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.footer .secContent .footerCard .footerIntro {
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.footer .secContent .footerCard .footerParagraph {
+  font-size: 13px;
+  color: var(--textColor);
+  margin-top: 10px;
+}
+.footer .secContent .footerCard .footerSocials {
+  column-gap: 0.5rem;
+}
+
+.footer .secContent .footerCard .footerLinks {
+  flex-basis: 50%;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.footer .secContent .footerCard .footerLinks .linkGroup .groupTitle {
+  display: block;
+  font-weight: 600;
+  color: var(--blackColor);
+  margin-bottom: 0.5rem;
+}
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList {
+  font-size: 15px;
+  color: var(--textColor);
+  transition: 0.3s ease-in-out;
+}
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList .icon {
+  font-size: 15px;
+  color: var(--greyText);
+}
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList:hover {
+  color: var(--PrimaryColor);
+  transform: translateX(7px);
+}
+.footer
+  .secContent
+  .footerCard
+  .footerLinks
+  .linkGroup
+  .footerList:hover
+  .icon {
+  color: var(--SecondaryColor);
+}
+.footer .secContent .footerCard .footerDiv {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--SecondaryColor);
+  padding: 0.5rem 2rem;
+}
+
+.footer .secContent .footerCard .footerDiv small {
+  font-size: 10px;
+  color: var(--whiteColor);
+}
+@media screen and (min-width: 500px) {
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+  .footer .secContent .footerCard .footerDiv {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .footer .secContent .footerCard .footerDiv small {
+    font-size: 14px;
+    color: var(--whiteColor);
+  }
+}
+@media screen and (min-width: 840px) {
+  .footer .secContent .contactDiv {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .secContent .contactDiv .inputDiv {
+    width: max-content;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .footer .secContent .contactDiv .inputDiv input {
+    width: 60%;
+  }
+  .footer .secContent .contactDiv .inputDiv .btn {
+    width: max-content;
+  }
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+  .footer .secContent .footerCard .footerDiv {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .footer .secContent .footerCard .footerDiv small {
+    font-size: 14px;
+    color: var(--whiteColor);
+  }
+}
+@media screen and (min-width: 600px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .secContent .footerCard {
+    flex-direction: row;
+  }
+  .footer .secContent .contactDiv {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .secContent .contactDiv .inputDiv {
+    width: max-content;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .footer .secContent .contactDiv .inputDiv input {
+    width: 60%;
+  }
+  .footer .secContent .contactDiv .inputDiv .btn {
+    width: max-content;
+  }
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+  .footer .secContent .footerCard .footerDiv {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .footer .secContent .footerCard .footerDiv small {
+    font-size: 14px;
+    color: var(--whiteColor);
+  }
+}
+@media screen and (min-width: 840px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .secContent .footerCard {
+    flex-direction: row;
+  }
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer .secContent .footerCard {
+    padding: 3rem 1rem;
+  }
+  .footer .secContent .footerCard .footerInto .footerParagraph {
+    font-size: 15px;
+    color: var(--textColor);
+  }
+  .footer .secContent .footerCard .footerInto .footerSocials {
+    column-gap: 0.5rem;
+  }
+  .footer .secContent .footerCard .footerInto .footerSocials .icon {
+    color: var(--textColor);
+    font-size: 25px;
+  }
+  .footer .secContent .footerCard .footerInto .footerSocials .icon:hover {
+    color: var(--PrimaryColor);
+  }
+  .footer .secContent .footerCard .footerLinks .linkGroup .footerList {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+}
+
+.yurem-img-footer {
+  width: 150px;
+}
+
+.card-yurem {
+  position: relative;
+  height: 250px;
+  width: 230px;
+  margin-left: 80px;
+}
+
+.card-yurem .boxshadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--PrimaryColor);
+  transform: scale(0.8);
+  box-shadow: var(--PrimaryColor) 0px 30px 70px 0px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card-yurem .main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--PrimaryColor);
+  background: linear-gradient(
+    0deg,
+    rgb(12, 53, 106) 0%,
+    var(--PrimaryColor) 60%,
+    rgb(12, 53, 106) 100%
+  );
+  position: relative;
+  -webkit-clip-path: polygon(
+    0 40px,
+    40px 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  clip-path: polygon(
+    0 40px,
+    40px 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 40px,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  box-shadow: rgb(12, 53, 106) 0px 7px 29px 0px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.tatil-başlık {
+  color: rgb(178, 117, 10) !important;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.card-yurem .main .top {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 2;
+  border-top: 115px solid rgb(252, 244, 230);
+  border-left: 115px solid transparent;
+  border-right: 115px solid transparent;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card-yurem .main .side {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 101%;
+  background: rgb(252, 244, 230);
+  -webkit-clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.card-yurem .main .left {
+  left: 0;
+}
+
+.card-yurem .main .right {
+  right: 0;
+  transform: translateX(50%) scale(-1, 1);
+}
+
+.card-yurem .main .title-yurem {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+  font-weight: bold;
+  font-size: 25px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.2s ease-out 0s;
+  color: rgb(252, 244, 230);
+}
+
+.card-yurem .main .button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-yurem .main .button-container .button {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+  clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+  background: rgb(252, 244, 230);
+  border: none;
+  color: white;
+  display: grid;
+  place-content: center;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card-yurem .main .button-container .button .svg {
+  width: 15px;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card-yurem .main .button-container .button:nth-child(1) {
+  bottom: 300px;
+  transition-delay: 0.4s;
+}
+
+.card-yurem .main .button-container .button:nth-child(2) {
+  bottom: 300px;
+  transition-delay: 0.6s;
+}
+
+.card-yurem .main .button-container .button:nth-child(3) {
+  bottom: 300px;
+  transition-delay: 0.8s;
+}
+
+.card-yurem .main .button-container .button:hover .svg {
+  transform: scale(1.2);
+}
+
+.card-yurem .main .button-container .button:active .svg {
+  transform: scale(0.7);
+}
+
+.card-yurem:hover .main {
+  transform: scale(1.1);
+}
+
+.card-yurem:hover .main .top {
+  top: -50px;
+}
+
+.card-yurem:hover .main .left {
+  left: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card-yurem:hover .main .right {
+  right: -50px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card-yurem:hover .main .title-yurem {
+  opacity: 1;
+  transition: all 0.2s ease-out 1.3s;
+}
+
+.card-yurem:hover .main .button-container .button:nth-child(1) {
+  bottom: 80px;
+  transition-delay: 0.8s;
+}
+
+.card-yurem:hover .main .button-container .button:nth-child(2) {
+  bottom: 40px;
+  transition-delay: 0.6s;
+}
+
+.card-yurem:hover .main .button-container .button:nth-child(3) {
+  bottom: 0;
+  transition-delay: 0.4s;
+}

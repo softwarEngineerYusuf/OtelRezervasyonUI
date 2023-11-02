@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-otel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 550px;
+  background: rgb(244, 240, 236);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-otel form {
+  position: absolute;
+  inset: 4px;
+  background: rgb(207 170 111);
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row; /* Yatay düzenlemek için */
+  flex-wrap: wrap; /* Eğer genişlik yetersizse alt satıra geçmesi için */
+  justify-content: space-between; /* Inputlar arasında boşluk bırakmak için */
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-otel form .inputBox-otel {
+  position: relative;
+  width: calc(50% - 10px); /* İki input yan yana olacak şekilde */
+  margin-top: 10px; /* Daha az yukarı kayma */
+}
+
+/* Diğer stiller burada olabilir */
+
+.box-otel::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff8200,
+    #ff8200,
+    #ff8200
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box-otel::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff8200,
+    #ff8200,
+    #ff8200
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderLine::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #2986cc,
+    #2986cc,
+    #2986cc
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+.borderLine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #2986cc,
+    #2986cc,
+    #2986cc
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box-otel form h2 {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.box-otel form .inputBox-otel input {
+  position: relative;
+  width: 100%;
+  padding: 50px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.box-otel form .inputBox-otel span {
+  position: absolute;
+  left: 0;
+  padding: 10px 0px 5px; /* Daha az üst boşluk */
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.box-otel form .inputBox-otel input:valid ~ span,
+.box-otel form .inputBox-otel input:focus ~ span {
+  color: #fff;
+  font-size: 0.75em;
+  transition: translateY(-34px);
+}
+.box-otel form .inputBox-otel i {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.box-otel form .inputBox-otel input:valid ~ i,
+.box-otel form .inputBox-otel input:focus ~ i {
+  height: 40px;
+}
+.box-otel form .links {
+  display: flex;
+  justify-content: space-between;
+}
+.box-otel form .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+.box-otel form .links a:hover,
+.box-otel form .links a:nth-child(2) {
+  color: #fff;
+}
+
+.button-72 {
+  background-color: #c17b2c;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #464141;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px; /* Biraz aşağıya kayması için */
+  margin-right: 15px; /* Biraz sola kayması için */
+  height: 50px;
+}
+
+.button-72:hover {
+  background-color: #fff;
+}
+
+.button-72:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-72 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
